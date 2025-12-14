@@ -1,0 +1,69 @@
+
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+}
+
+.card {
+  background: #ffffff;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 10px;
+  color: #ff6f91;
+}
+
+.intro {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.highlight {
+  background: #fff0f5;
+  padding: 15px;
+  border-radius: 12px;
+  color: #d6336c;
+  font-weight: 500;
+}
+
+footer {
+  margin-top: 25px;
+}
+
+.name {
+  font-weight: bold;
+  color: #6a5acd;
+}
+```
+
+---
+
+📌 **Cómo usarlo**:
+
+1. Crea una carpeta.
+2. Dentro guarda dos archivos: `index.html` y `styles.css`.
+3. Copia cada código en su archivo correspondiente.
+4. Abre `index.html` en el navegador.
+
+Si quieres, puedo personalizar el texto con su nombre, colores favoritos o agregar una animación ✨
