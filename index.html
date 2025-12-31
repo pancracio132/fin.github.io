@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,6 +7,23 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <!-- Botón para iniciar música -->
+  <div class="music-controls">
+    <button onclick="iniciarMusica()">🎵 Reproducir música</button>
+    <button onclick="pausarMusica()">⏸ Pausar</button>
+  </div>
+
+  <!-- Música de fondo (YouTube oculto) -->
+  <iframe
+    id="ytmusic"
+    width="0"
+    height="0"
+    src="https://www.youtube.com/embed/ejfDEy6w2Q4?controls=0&loop=1&playlist=ejfDEy6w2Q4"
+    frameborder="0"
+    allow="autoplay; encrypted-media">
+  </iframe>
+
   <div class="card">
     <h1>💖 Gracias por este año 💖</h1>
     <p class="intro">Para mi manita</p>
@@ -24,34 +40,34 @@
 
     <div class="poem">
       <p>
-       Yo soy el sol que aprende a levantarse,<br>
-       tú la luna que sabe esperar,
-       cuando me pierdo entre nubes y miedos,<br>
-       tu luz me vuelve a encontrar.
+        Yo soy el sol que aprende a levantarse,<br>
+        tú la luna que sabe esperar,<br>
+        cuando me pierdo entre nubes y miedos,<br>
+        tu luz me vuelve a encontrar.
       </p>
       <p>
-       Yo soy mago de sueños torcidos,<br>
-      de hechizos que a veces salen mal,<br>
-      tú eres pirata de mares valientes,<br>
-      con mapas, coraje y libertad.
+        Yo soy mago de sueños torcidos,<br>
+        de hechizos que a veces salen mal,<br>
+        tú eres pirata de mares valientes,<br>
+        con mapas, coraje y libertad.
       </p>
       <p>
-        Si el día pesa, tú cuidas la noche,
+        Si el día pesa, tú cuidas la noche,<br>
         si la noche duele, yo traigo el calor,<br>
-        no hace falta estar siempre juntas
-        para saber que late el mismo corazón.💖
+        no hace falta estar siempre juntas<br>
+        para saber que late el mismo corazón. 💖
       </p>
       <p>
-       Hermana querida, elegida por la vida,<br>
-       no por sangre, sino por verdad,
-       sol y luna, mago y pirata,<br>
-       dos almas unidas hasta el fin de estos días y más.
+        Hermana querida, elegida por la vida,<br>
+        no por sangre, sino por verdad,<br>
+        sol y luna, mago y pirata,<br>
+        dos almas unidas hasta el fin de estos días y más.
       </p>
       <p>
-       Porque aunque el cielo cambie de forma<br>
-      y el tiempo nos quiera probar,
-      siempre habrá magia en tu risa<br>
-      y un hogar al que llamar amistad. 
+        Porque aunque el cielo cambie de forma<br>
+        y el tiempo nos quiera probar,<br>
+        siempre habrá magia en tu risa<br>
+        y un hogar al que llamar amistad.
       </p>
     </div>
 
@@ -62,14 +78,30 @@
         <li>Gracias por tus mensajes inesperados que alegran mis días.</li>
         <li>Gracias por las risas tontas que se vuelven recuerdos importantes.</li>
         <li>Gracias por apoyarme sin juzgar y por creer en mí.</li>
-        <li>Gracias por acompañarme este año manita sin ti tal vez ya no tendrias a tu manito Te quiero mucho</li>
-        <li>Si me lo permites estare para ti cuando me necesites</li>
+        <li>Gracias por acompañarme este año manita, sin ti tal vez ya no tendría a mi manita.</li>
+        <li>Si me lo permites, estaré para ti cuando me necesites.</li>
       </ul>
     </div>
 
     <footer>
-      <p>Con amor,<br><span class="name">Tu manito</p>
+      <p>Con amor,<br><span class="name">Tu manito</span></p>
     </footer>
   </div>
+
+  <!-- JavaScript -->
+  <script>
+    const iframe = document.getElementById("ytmusic");
+
+    function iniciarMusica() {
+      if (!iframe.src.includes("autoplay=1")) {
+        iframe.src += "&autoplay=1";
+      }
+    }
+
+    function pausarMusica() {
+      iframe.src = "https://www.youtube.com/embed/ejfDEy6w2Q4?controls=0&loop=1&playlist=ejfDEy6w2Q4";
+    }
+  </script>
+
 </body>
 </html>
