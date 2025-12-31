@@ -1,9 +1,10 @@
-
+/* Reset y fuente */
 * {
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Fondo general */
 body {
   margin: 0;
   min-height: 100vh;
@@ -13,32 +14,88 @@ body {
   background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
 }
 
+/* Tarjeta principal */
 .card {
   background: #ffffff;
-  max-width: 500px;
+  max-width: 550px;
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
   text-align: center;
+  animation: aparecer 1.1s ease;
 }
 
+/* Animación suave */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Título */
 h1 {
   margin-bottom: 10px;
   color: #ff6f91;
 }
 
+/* Intro */
 .intro {
   font-weight: bold;
   color: #555;
   margin-bottom: 20px;
 }
 
+/* Párrafos */
 p {
   color: #444;
   line-height: 1.6;
   margin-bottom: 15px;
 }
 
+/* Poema */
+.poem {
+  background: #fff0f5;
+  padding: 18px;
+  border-radius: 15px;
+  color: #d6336c;
+  margin: 25px 0;
+}
+
+.poem p {
+  margin-bottom: 15px;
+}
+
+/* Detalles */
+.details h2 {
+  margin-top: 25px;
+  color: #ff6f91;
+}
+
+.details ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.details li {
+  margin-bottom: 10px;
+  color: #555;
+  position: relative;
+  padding-left: 22px;
+}
+
+.details li::before {
+  content: "🌷";
+  position: absolute;
+  left: 0;
+}
+
+/* Sección destacada (por si la usas) */
 .highlight {
   background: #fff0f5;
   padding: 15px;
@@ -47,23 +104,52 @@ p {
   font-weight: 500;
 }
 
+/* Footer */
 footer {
   margin-top: 25px;
+  color: #666;
 }
 
 .name {
   font-weight: bold;
   color: #6a5acd;
 }
-```
 
----
+/* Controles de música */
+.music-controls {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
 
-📌 **Cómo usarlo**:
+.music-controls button {
+  background: #ff6f91;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin-left: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
 
-1. Crea una carpeta.
-2. Dentro guarda dos archivos: `index.html` y `styles.css`.
-3. Copia cada código en su archivo correspondiente.
-4. Abre `index.html` en el navegador.
+.music-controls button:hover {
+  background: #d6336c;
+  transform: scale(1.05);
+}
 
-Si quieres, puedo personalizar el texto con su nombre, colores favoritos o agregar una animación ✨
+/* Responsive */
+@media (max-width: 600px) {
+  .card {
+    margin: 20px;
+    padding: 25px;
+  }
+
+  .music-controls {
+    top: 10px;
+    right: 10px;
+  }
+}
